@@ -17,9 +17,9 @@ public Rigidbody2D rb;
 public void Update()
 {
     float h = Input.GetAxis("Horizontal");
-    float v = Input.GetAxis("Vertical");
+    // float v = Input.GetAxis("Vertical");
 
-    Vector3 tempVect = new Vector3(h, v, 0);
+    Vector3 tempVect = new Vector3(h, 0, 0);
     tempVect = tempVect.normalized * speed * Time.deltaTime;
     rb.MovePosition(rb.transform.position + tempVect);
 }
